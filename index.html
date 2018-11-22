@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>苹果官网iPhone5s介绍页面</title>
+<link rel="stylesheet" href="css/onepage-scroll.css">
+<style>
+* { margin: 0; padding: 0;}
+ul, ol { list-style-type: none;}
+.f-cb:after { display: table; content: ''; clear: both;}
+.f-cb { zoom: 1;}
+a { text-decoration: none;}
+
+html { overflow-x: auto;}
+body { min-width: 1024px; font: 12px/18px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif; color: #333;}
+.loading { background: url(img/loading.gif) 50% no-repeat;}
+.loading .main { opacity: 0; opacity: 0;}
+
+.main { -webkit-transition:opacity .6s; -moz-transition:opacity .6s; -o-transition:opacity .6s; transition: opacity .6s;}
+.page { position: relative; overflow: hidden;}
+.page .txt { z-index: 2}
+.page .txt p { font-size: 19px; line-height: 1.6316;}
+.page img { z-index: 1;}
+.page1 { background: url(img/texture_50.png) repeat scroll 0 0 / 160px auto, url(img/gradient_gold.png) repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0); background-color: #e2d5c5;}
+.page2 { background: url(img/texture_20.png) repeat scroll 0 0 / 160px auto, url(img/gradient_black.png) repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0); background-color: #5f5f61;}
+.page3 { background: url(img/texture_50.png) repeat scroll 0 0 / 160px auto, url(img/gradient_gold_reverse.png) repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0); background-color: #e2d5c5;}
+.page4 { background: url(img/texture_50.png) repeat scroll 0 0 / 160px auto, url(img/gradient_silver.png) repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0); background-color: #cecfd3;}
+.page5 { background: url(img/gradient_white.png) repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0); background-color: #f4f4f4;}
+
+.mainNav { width: 980px; height: 36px; margin: 18px auto; border-radius: 5px; background: url(img/globalheader.png) 0 0 repeat-x;}
+.mainNav ul { display: table; float: left; width: 845px; table-layout: fixed;}
+.mainNav ul li { display: table-cell; height: 36px; overflow: hidden;}
+.mainNav li a { display: block; line-height: 36px; font-size: 12px; text-align: center; color: #fff;}
+.mainNav li:nth-child(1) { border-radius: 5px 0 0 5px;}
+.mainNav li a:hover { background-color: #333;}
+
+.subNav { width: 980px; margin: 0 auto; padding-bottom: 10px; border-bottom: 1px solid #d1c6b3;}
+.subNav h2 { float: left; width: 140px; height: 30px; text-indent: -9999px; background-image: url(img/producheader_productname.png);}
+.subNav ul { float: right; padding-top: 8px;}
+.subNav li { float: left; font-size: 12px; margin: 0 8px 0 24px;}
+.subNav a { float: left; line-height: 25px; color: #333;}
+.subNav .buy { width: 72px; height: 25px; text-indent: -9999px; background-image: url(img/buynows.png);}
+
+.page1 .txt { position: absolute; left: 50%; top: 50%; margin: -100px 0 0 -490px; width: 433px; height: 310px;}
+.page1 .txt h2 { width: 450px; height: 145px; margin-bottom: 20px; text-indent: -9999px; background-image: url(img/hero_title.png);}
+.page1 p { width: 340px;}
+.page1 img { position: absolute; left: 50%; top: 187px; margin-left: -105px;}
+
+.page2 .txt { position: absolute; left: 50%; bottom: 15%; width: 980px; margin-left: -490px;}
+.page2 .txt h2 { width: 980px; margin: 0 auto; height: 61px; background-image: url(img/forward_title.png);}
+.page2 .txt p { width: 630px; margin: 0 auto; line-height: 1.6316; font-size: 19px; text-align: center; color: #fff;}
+.page2 .txt span { white-space: nowrap;}
+.page2 img { position: absolute; left: 50%; top: 50%; margin-left: -773px; margin-top: -756px;}
+
+.page3 .txt { position: absolute; left: 50%; top: 50%; width: 980px; margin-left: -490px; margin-top: 130px; font-size: 16px; line-height: 1.6875; text-align: center;}
+.page3 .txt h2 { width: 980px; height: 114px; margin-bottom: 5px; text-indent: -9999px; background-image: url(img/smart_title.png);}
+.page3 img { position: absolute; left: 50%; top: 50%; margin-left: -542px; margin-top: -2838px;}
+
+.page4 img { position: absolute; left: 50%; top: 50%; margin-left: -594px; margin-top: -900px;}
+.page4 .txt { position: absolute; left: 50%; top: 50%; width: 980px; height: 114px; margin-left: -191px; margin-top: -184px;}
+.page4 h2 { width: 545px; height: 114px; margin: 0 auto 5px; text-indent: -9999px; background-image: url(img/ios_title.png);}
+.page4 p { width: 500px; margin-left: 220px; line-height: 1.6316; font-size: 19px;}
+
+.page5 img { position: absolute; left: 50%; top: 50%; margin-left: -1374px; margin-top: -352px;}
+.page5 .txt { position: absolute; left: 50%; top: 0; width: 980px; margin-left: -490px; margin-top: 120px;}
+.page5 h2 { height: 113px; margin-bottom: 5px; text-indent: -9999px; background-image: url(img/cases_title.png);}
+.page5 p { width: 610px; margin-left: 220px; line-height: 1.6316; font-size: 19px; text-align: center;}
+
+.responsive-height-lt790 .page .txt p { font-size: 16px; line-height: 1.6875;}
+
+.responsive-height-lt790 .page1 .txt { margin-top: -100px;}
+
+.responsive-height-lt790 .page2 .txt { bottom: 10%;}
+.responsive-height-lt790 .page2 img { margin-left: -596px; margin-top: -399px;}
+
+.responsive-height-lt790 .page3 .txt { margin-top: 0;}
+.responsive-height-lt790 .page3 img { margin-left: -407px; margin-top: -473px;}
+
+.responsive-height-lt790 .page4 img { margin-left: -475px; margin-top: -465px;}
+.responsive-height-lt790 .page4 .txt { margin-left: -270px; margin-top: -135px;}
+
+.responsive-height-lt790 .page5 img { margin-left: -777px; margin-top: -178px;}
+.responsive-height-lt790 .page5 .txt { margin-top: 30px;}
+</style>
+</head>
+
+<body class="loading">
+<div class="main" id="main">
+	<div class="page page1">
+		<div class="mainNav f-cb">
+			<ul>
+				<li><a href="http://www.mycodes.net">Apple</a></li>
+				<li><a href="#">在线商店</a></li>
+				<li><a href="javascript:">Mac</a></li>
+				<li><a href="javascript:">iPod</a></li>
+				<li><a href="javascript:">iPhone</a></li>
+				<li><a href="javascript:">iPad</a></li>
+				<li><a href="javascript:">iTunes</a></li>
+				<li><a href="javascript:">技术支持</a></li>
+			</ul>
+			<div class="search"></div>
+		</div>
+		<div class="subNav f-cb">
+			<h2>iPhone 5S</h2>
+			<ul>
+				<li><a href="#">功能</a></li>
+				<li><a href="javascript:">设计</a></li>
+				<li><a href="javascript:">内置 App</a></li>
+				<li><a href="javascript:">App Store</a></li>
+				<li><a href="javascript:">视频</a></li>
+				<li><a href="javascript:">技术规格</a></li>
+				<li><a class="buy" href="javascript:">立即购买 iPhone 5s</a></li>
+			</ul>
+		</div>
+		<div class="txt">
+			<h2>iPhone 5s。你比你想象的更强大。</h2>
+			<p>你拥有一种力量，来开创，来塑造，来分享自己的生活。这种力量可让你将日常之事处理得非同凡响，并让非同凡响成为日常之事。有了 iPhone 5s，你比你想象的更强大。</p>
+		</div>
+		<img class="responsiveImg" date-small="img/img1-s.png" date-big="img/img1-b.png" src="img/img1-b.png" alt="iPhone 5s。你比你想象的更强大。">
+	</div>
+	<div class="page page2">
+		<div class="txt">
+			<h2></h2>
+			<p>iPhone 5s 敢于构想，缜于思量，更精于工艺。它创造了技术上的可能，更<span>缔造了技术为人所用的典范</span>。它不仅是顺理成章的下一代，更<span>是本该如此的新一代。</span></p>
+		</div>
+		<img class="responsiveImg" date-small="img/img2-s.png" date-big="img/img2-b.png" src="img/img2-b.png" alt="iPhone 5s">
+	</div>
+	<div class="page page3">
+		<div class="txt">
+			<h2>众多尖端科技，在此凝聚。</h2>
+			<p>iPhone 5 一开先河，将众多令人赞叹的技术融入纤薄轻巧的设计之中。<br>iPhone 5s 更进一步，带来了 Touch ID 指纹识别传感器、64 位架构的全新 A7 芯<br>片、更加出色的 iSight 摄像头和超快的无线网络连接。</p>
+		</div>
+		<img class="responsiveImg" date-small="img/img3-s.png" date-big="img/img3-b.png" src="img/img3-b.png" alt="iPhone 5s">
+	</div>
+	<div class="page page4">
+		<div class="txt">
+			<h2>众多尖端科技，在此凝聚。</h2>
+			<p>iPhone 5s 是全球首部 64 位智能手机。iOS 7 在设计时便考虑到了这一点，并专门围绕 64 位架构而打造。这也令 iOS 7 和 iPhone 的超前堪称齐头并进。</p>
+		</div>
+		<img class="responsiveImg" date-small="img/img4-s.png" date-big="img/img4-b.png" src="img/img4-b.png" alt="iPhone 5s">
+	</div>
+	<div class="page page5">
+		<div class="txt">
+			<h2>众多尖端科技，在此凝聚。</h2>
+			<p>iPhone 5s Case 的精密设计使其可与 iPhone 紧密契合。精选的优质皮革，赋予了它优雅的外观和奢华的气质。色彩协调、触感柔软的超细纤维内衬，尽可呵护你的 iPhone 5s。</p>
+		</div>
+		<img class="responsiveImg" date-small="img/img5-s.png" date-big="img/img5-b.png" src="img/img5-b.png" alt="iPhone 5s Case">
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script src="js/jQuery.resizeEnd.min.js"></script>
+<script src="js/modernizr.custom.07427.js"></script>
+<script>
+$(function(){
+	var $window = $(window);
+	var $wh = $window.height();
+	var $body = $('body');
+	var $main = $('.main');
+	var $responsiveImg = $('.responsiveImg');
+	var $responsiveFallback = false;
+
+	//页面加载时判断是否需要更换图片
+	if($wh < 790){
+		responsiveFn1();
+	}
+
+	//浏览器检测，判断是否为高级浏览器
+	if(Modernizr.cssanimations){
+		$responsiveFallback = false;
+	} else {
+		$responsiveFallback = true;
+	}
+
+	//onepage_scroll方法
+	$main.onepage_scroll({
+		sectionContainer: '.page',
+		responsiveFallback: $responsiveFallback
+	});
+
+	//窗口改变大小切换不同的图片
+	$window.resizeEnd({
+		delay : 500
+	}, function(){
+		var $wh = $window.height();
+		if($wh < 790){
+			responsiveFn1();
+		} else {
+			responsiveFn2();
+		}
+	});
+
+	function responsiveFn1(){
+		$body.addClass('responsive-height-lt790')
+		$responsiveImg.each(function(){
+			var $dateSmall = $(this).attr('date-small');
+			$(this).attr('src', $dateSmall);
+		});
+	}
+
+	function responsiveFn2(){
+		$body.removeClass('responsive-height-lt790')
+		$responsiveImg.each(function(){
+			var $dateBig = $(this).attr('date-big');
+			$(this).attr('src', $dateBig);
+		});
+	}
+
+	$('a').click(function(){
+		return false;
+	});
+});
+
+//页面加载时的 Loading 效果
+$(window).load(function(){
+	window.setTimeout(function(){
+		$('body').removeClass('loading');
+	}, 2000);
+});
+</script>
+
+
+</body>
+</html>

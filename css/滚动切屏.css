@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 1900px;
+    /* overflow-y:hidden; */
+}
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.Box{
+    width: 100%;
+    height: 2000px;
+    position: relative;
+    display: block;
+}
+.page1{
+    position: absolute;
+    width: 100%;
+    height: 36%;
+    top: 0%;
+    left: 0px;
+    background: url("../img/texture_50.png") repeat scroll 0 0 / 160px auto,
+                url("../img/gradient_gold.png") repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.mainNav{
+    width: 980px;
+    height: 36px;
+    margin: 18px auto;
+    border-radius: 5px;
+    background: url("../img/globalheader.png") 0 0 repeat-x;
+    z-index: 9999;
+}
+.mainNav>ul{
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+}
+.mainNav>ul li{
+    height: 36px;
+    width: 115px;
+}
+.mainNav>ul li:nth-child(1){
+    border-radius:5px 0px 0px 5px;
+}
+.mainNav>ul li:last-child{
+    border-radius:0px 5px 5px 0px;
+}
+.mainNav>ul li a{
+    display: block;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+}
+.mainNav>ul li:hover{
+    background: rgb(36, 35, 35);
+}
+.subNav{
+    width: 980px;
+    margin:0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1c6b3;
+    display: flex;
+    justify-content: space-between;
+}
+.subNav h2{
+    width: 140px;
+    height: 30px;
+    text-indent: -9999px;
+    background: url("../img/producheader_productname.png") 0 0 no-repeat;
+}
+.subNav ul{
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+.subNav li{
+    margin: 0 8px 0 24px;
+    font-size: 12px;
+}
+.subNav li a{
+    color: #000;
+}
+.subNav ul li:last-child{
+    width: 72px;
+    height: 25px;
+    text-indent: -9999px;
+    background: url("../img/buynows.png");
+}
+.page1 .txt{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 433px;
+    height: 310px;
+    margin:-100px 0 0 -490px;
+    z-index: 2;
+}
+.page1 .txt h2{
+    width: 450px;
+    height: 145px;
+    margin-bottom: 20px;
+    text-indent: -9999px;
+    background: url("../img/hero_title.png");
+    cursor: pointer;
+}
+.page1 .txt p{
+    width: 340px;
+    font-size: 16px;
+    line-height: 1.6875;
+}
+.page1 img{
+    position: absolute;
+    width: 694px;
+    height: 664px;
+    left: 50%;
+    top: 187px;
+    margin-left: -105px;
+}
+.page2{
+    top: 34%;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 34%;
+    background: orange;
+    overflow: hidden;
+    background: url("../img/texture_20.png") repeat scroll 0 0 / 160px auto,
+                url("../img/gradient_black.png") repeat scroll 0 0 / 20px 100%;
+    transition: all 0.5s ease;
+}
+.page2 .txt{
+    position: absolute;
+    bottom: 20%;
+    width: 980px;
+    height: 115px;
+    margin: 0 auto;
+    margin-left: 175px;
+}
+.page2 .txt h2{
+    width: 980px;
+    height: 61px;
+    margin: 0 auto;
+    background: url("../img/forward_title.png");
+}
+.page2 p{
+    width: 630px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    line-height: 1.6866;
+}
+.page2 img{
+    position: absolute;
+    left: 5%;
+    top:-20%;
+}
+.page3{
+    width: 100%;
+    height: 38%;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    top: 68%;
+    left: 0px;
+    background: url("../img/texture_50.png") repeat scroll 0 0 / 160px auto,
+                url("../img/gradient_gold_reverse.png") repeat scroll 0 0 / 20px 100% rgba(0, 0, 0, 0);
+}
+.page3 p{
+    line-height: 1.6866;
+}
+.page3 h2{
+    position: absolute;
+    width: 980px;
+    height: 114px;
+    margin-bottom: 5px;
+    text-indent: -9999px;
+    background: url("../img/smart_title.png");
+}
+.page3 img{
+    position: absolute;
+    top: -275%;
+    left: 10%;
+}
+.page3 .txt{
+    position: absolute;
+    top: 65%;
+    width: 980px;
+    height: 200px;
+    font-size: 16px;
+    line-height: 1.6875;
+    text-align: center;
+    left: 15%;
+}
+.page3 p{
+    line-height: 1.6866;
+    margin-top: 13%;
+}
+.page3 h2{
+    width: 980px;
+    height: 114px;
+    margin-bottom: 5px;
+    text-indent: -9999px;
+    background: url("../img/smart_title.png");
+}
+.Box>ul{
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    top: 40%;
+    right: 20px;
+}
+.Box>ul li{
+    width: 10px;
+    height: 10px;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.active{
+    background: #000;
+}
